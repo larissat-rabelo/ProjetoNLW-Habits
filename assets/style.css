@@ -4,20 +4,22 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #09090a;
+  color: #FFF;
+  height: 100vh;
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 48px;
+  padding: 25px 60px;
   position: fixed;
   width: 100%;
   background-color: #000000;
-}
-
-body {
-  background-color: #09090a;
-  color: white;
-  height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
 }
 
 .botao {
@@ -41,7 +43,7 @@ input {
   width: 64px;
   height: 64px;
   border-radius: 8px;
-  border: 2px solid #27272a;
+  border: 2px solid #2a2729;
   background-color: #18181b;
 }
 
@@ -52,8 +54,24 @@ input:checked {
 
 #form-habits {
   display: flex;
-  padding: 190px 48px 48px;
+  padding: 180px 48px 48px;
   width: fit-content;
+}
+
+.habit {
+  width: 62px;
+  height: 60px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.habits {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 70px;
 }
 
 .days {
@@ -68,33 +86,11 @@ input:checked {
   gap: 24px;
 }
 
-.dia div {
+.day div {
   margin-bottom: 5px;
   font-family: "Roboto Mono";
   font-size: 20px;
   line-height: 125%;
   color: #a1a1aa;
   text-align: center;
-}
-
-.habit {
-  width: 62px;
-  height: 62px;
-  font-size: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.habits {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 70px;
-}
-
-@media screen and (max-width: 570px) {
-  .botao div {
-    display: none;
-  }
 }
