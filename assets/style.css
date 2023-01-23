@@ -1,13 +1,100 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px;
+  position: fixed;
+  width: 100%;
+  background-color: #000000;
 }
 
 body {
-  background-color: #09090A;
+  background-color: #09090a;
   color: white;
-
-  display: grid;
-  place-items: center;
-
   height: 100vh;
+}
+
+.botao {
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid #8b5cf6;
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none; /*É um rederizador utilizado para garantir que o atributo funcione em outros navegadores*/
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  border: 2px solid #27272a;
+  background-color: #18181b;
+}
+
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+
+#form-habits {
+  display: flex;
+  padding: 190px 48px 48px;
+  width: fit-content;
+}
+
+.days {
+  display: flex;
+  gap: 50px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dia div {
+  margin-bottom: 5px;
+  font-family: "Roboto Mono";
+  font-size: 20px;
+  line-height: 125%;
+  color: #a1a1aa;
+  text-align: center;
+}
+
+.habit {
+  width: 62px;
+  height: 62px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.habits {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 570px) {
+  .botao div {
+    display: none;
+  }
 }
